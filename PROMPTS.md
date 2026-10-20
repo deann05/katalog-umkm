@@ -92,4 +92,18 @@ Tidak ada perbaikan yang diperlukan.
 
 ## Debugging dan fitur bonus
 
-Tambahkan bagian baru untuk setiap error yang kamu perbaiki atau fitur bonus yang kamu kerjakan.
+### US-11 Filter kategori atau pencarian produk [SENDIRI]
+
+**Prompt:**
+yang bagian dashboard Toko Diskuy, yang menampilkan katalog produk-produk, coba di bagusin lagi dan ada pencarian gitu untuk keinginan pengguna
+
+**Hasil:**
+Berhasil. Tampilan halaman depan/katalog Toko Diskuy (`app/page.jsx`) ditingkatkan dengan:
+1. Desain banner toko yang lebih elegan, rapi, dan informatif: menampilkan badge jam operasional toko, nama usaha, tagline, serta alamat toko secara konsisten dengan sistem warna di `DESIGN.md`.
+2. Dibuatkan komponen `components/KatalogProduk.jsx` yang menyediakan kolom pencarian interaktif instan (mencari berdasarkan nama, kategori, maupun deskripsi produk).
+3. Tombol filter kategori dinamis (chips/pills) yang otomatis mengekstrak kategori dari data produk di database.
+4. Indikator jumlah produk yang ditemukan, tombol reset filter, dan tampilan ramah saat produk yang dicari tidak ditemukan.
+5. Akses database tetap terjaga aman di Server Component (`app/page.jsx`) sehingga tidak ada Supabase client di sisi browser ("use client"). Build berhasil tanpa error.
+
+**Perbaikan:**
+Tidak ada perbaikan yang diperlukan.
